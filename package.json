@@ -1,0 +1,42 @@
+{
+  "name": "pair-em-up",
+  "author": "Nataliia Solntseva",
+  "homepage": "https://rolling-scopes-school.github.io/natashasolntseva-JSFE2025Q3/pair-em-up/",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint src --ext .js,.ts,.jsx,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,css,html}\"",
+    "prepare": "husky",
+    "pre-commit": "lint-staged",
+    "deploy": "vite build && gh-pages -d dist -f --dest pair-em-up"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "vite": "^7.2.2"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "modern-normalize": "^3.0.1",
+    "tailwindcss": "^4.1.17"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,html,json,md}": [
+      "prettier --write"
+    ]
+  }
+}
