@@ -6,13 +6,13 @@ import {
   renderGridFromState,
 } from '../utils/createGrid.js';
 import { initPairLogic } from '../utils/pairLogic.js';
-import { GameHeader } from '../components/GameHeader';
 import { createGameControls } from '../utils/createGameControls.js';
 import { createAssistPanel } from '../utils/createAssistPanel.js';
 import { gameStore } from '../state/gameStore.js';
 import { clearContainer } from '../utils/clearScreen.js';
 import { playIfEnabled } from '../utils/soundManager.js';
 import { InfoPanel } from '../components/infoPanel.js';
+import { GameHeader } from '../components/gameHeader.js';
 
 export function renderGameScreen(mode, savedState = null) {
   const container = document.createElement('div');
